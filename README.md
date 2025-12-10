@@ -1,57 +1,138 @@
-📊 British Social Attitudes Survey 2019 – Data Science Analysis
+📊 British Social Attitudes Survey 2019
+End-to-End Data Science Analysis (R Project)
 
-This repository contains an end-to-end data science project analysing the British Social Attitudes Survey 2019, focusing on poverty, welfare, political attitudes, and demographic patterns.
+This repository contains a full data science workflow analysing the British Social Attitudes Survey (BSA) 2019, with a focus on poverty, welfare, political attitudes, social trust, and demographic patterns in Britain.
 
-The project simulates real consulting work for HM Treasury, following the structure of:
+The project mirrors the structure of a professional consulting engagement for HM Treasury — from raw data → insights → statistical modelling → communication.
 
-Data import & cleaning
+🚀 Project Overview
 
-Missing-value handling
+This analysis walks through the complete life-cycle of a data science project:
 
-Feature transformation (e.g., age recoding)
+1️⃣ Data Import & Cleaning
 
-Exploratory data analysis
+Loading the official BSA 2019 dataset
 
-Statistical testing (Chi-square, correlations)
+Converting special missing-value codes (−1, 8, 9, 98, 99…)
 
-Machine learning models
+Preparing variables for modelling
 
-Linear regression
+2️⃣ Feature Engineering
 
-Logistic regression
+Recoding respondent age into policy-friendly groups
 
-Visualisations (heatmaps, correlation matrix)
+Handling education categories
 
-Summarising findings
+Creating binary classes for logistic regression
 
-🔧 Tools Used
+Structuring variables for statistical models
 
-R (tidyverse, ggplot2, corrplot, reshape2 or tidyr::pivot_longer)
+3️⃣ Exploratory Data Analysis
+
+Age distributions
+
+Education patterns
+
+Cross-tabulations
+
+Demographic insights
+
+4️⃣ Statistical Testing
+
+Chi-square tests (age × education association)
+
+Correlation analysis (political attitudes, spending views, poverty perception)
+
+5️⃣ Machine Learning Models
+
+Linear regression: Predicting fraud perception (NatFrEst) using politics + income
+
+Logistic regression: Predicting who supports “Increase taxes & spend”
+
+Model accuracy evaluation (95% achieved)
+
+6️⃣ Visualisations
+
+Heatmaps
+
+Correlation matrix
+
+Histograms
+
+Boxplots
+
+7️⃣ Reporting & Interpretation
+
+Interpreting model coefficients
+
+Explaining relationships in clear policy language
+
+Turning findings into insights for stakeholders
+
+📁 Project Structure
+📦 British-Social-Attitudes-Analysis-2019
+│
+├── data/
+│   └── bsa2019_poverty_open.tab      # raw dataset (excluded from GitHub)
+│
+├── scripts/
+│   ├── analysis.R                    # full analysis pipeline
+│   └── cleaning.R                    # data cleaning functions
+│
+├── README.md                         # this file
+├── .gitignore                        # ignored files
+└── LICENSE                           # project license
+
+🧰 Tools & Libraries
+R Packages
+
+tidyverse — data wrangling
+
+ggplot2 — visualisation
+
+corrplot — correlation matrices
+
+reshape2 / tidyr — heatmaps
+
+stats — modelling (lm, glm, chisq.test)
+
+Other Tools
 
 Git & GitHub
 
 Markdown
 
-📁 Project Structure
-data/       # raw data (not included)
-scripts/    # R analysis code
-README.md
-.gitignore
+📌 Key Findings
 
-📈 Key Results
+📍 1. Age strongly predicts education levels
+→ Chi-square test: p < 0.001
 
-Strong association between age and education level (χ² p < 0.001).
+📍 2. Political beliefs significantly influence fraud perception (NatFrEst)
+→ Political variables explain ~22% of variation alone
+→ Adding income increases model explanatory power
 
-Political leaning and income impact fraud perception (NatFrEst).
+📍 3. Logistic model accurately predicts tax-and-spend attitudes
+→ Accuracy: 95.8%
 
-Logistic model predicting “Increase taxes & spend” achieved 95% accuracy.
+📍 4. Clear relationships exist between media habits, spending priorities, and party ID
 
-Strong patterns linking Party ID, spending priorities, and media habits.
+▶️ How to Run the Analysis
 
-🚀 How to Run
+Open R or RStudio and run:
+
 source("scripts/analysis.R")
 
-📩 Contact
 
-Created by Khalil Alakbarzade
-MSc Data Science – University of Sheffield
+Make sure the dataset is placed inside the data/ folder.
+
+👤 Author
+
+Khalil Alakbarzade
+MSc Data Science — University of Sheffield
+📍 Sheffield, United Kingdom
+🔗 GitHub: https://github.com/KhalilAlak
+
+📄 License
+
+This project is released under the MIT License.
+See the LICENSE file for details.
