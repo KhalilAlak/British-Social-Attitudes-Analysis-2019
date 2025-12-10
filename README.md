@@ -1,3 +1,57 @@
+---
+
+## 1️⃣ Fix the merge conflict in `README.md`
+
+In your project folder:
+
+```bash
+cd ~/British-Social-Attitudes-Analysis-2019
+```
+
+1. **Open `README.md` in an editor** (VS Code example):
+
+   ```bash
+   code README.md
+   ```
+
+   or, with nano:
+
+   ```bash
+   nano README.md
+   ```
+
+2. Inside the file you’ll see conflict markers like:
+
+   ```text
+   <<<<<<< HEAD
+   ...your local version...
+   =======
+   ...GitHub version...
+   >>>>>>> 5cb6b9e...
+   ```
+
+3. **Delete everything** in the file and replace it with the new README I give you below.
+
+4. Save & close the editor.
+
+5. Then run:
+
+   ```bash
+   git status          # should show “modified: README.md”
+   git add README.md
+   git commit -m "Resolve README merge conflict"
+   git push origin main
+   ```
+
+After that, the conflict is gone and your local + GitHub are in sync.
+
+---
+
+## 2️⃣ New, cleaner README you can paste
+
+Replace the whole file with this:
+
+````markdown
 # 📊 British Social Attitudes 2019 – Poverty & Welfare Analysis
 
 This repository contains an end-to-end data science project using the **British Social Attitudes Survey 2019**.  
@@ -50,75 +104,78 @@ British-Social-Attitudes-Analysis-2019/
 ├── .gitignore
 ├── LICENSE
 └── README.md
-Note: The raw dataset is not included in the public repo.
-Place your local .tab file into data/ before running the analysis.
+````
 
-⚙️ Tools & Packages
-This project uses:
-
-R (tidyverse ecosystem)
-
-tidyverse – data wrangling & plotting
-
-ggplot2 – visualisations
-
-corrplot – correlation matrix visualisation
-
-Git & GitHub – version control and portfolio hosting
-
-Markdown – documentation
-
-🚀 How to Run the Analysis
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019.git
-cd British-Social-Attitudes-Analysis-2019
-Put the BSA 2019 .tab file into the data/ folder (same name used in scripts/analysis.R).
-
-Open R / RStudio and run:
-
-r
-Copy code
-source("scripts/analysis.R")
-The script will:
-
-Clean and transform the data
-
-Run EDA and statistical tests
-
-Fit linear & logistic regression models
-
-Produce plots for heatmaps and the correlation matrix
-
-🔍 Key Findings (Summary)
-Age & education show a strong association (large chi-square, p < 0.001).
-
-Fraud perception (NatFrEst) is influenced by both political orientation and income level.
-
-The logistic model predicting “Increase taxes & spend” vs “Don’t increase” achieves high accuracy on the test set.
-
-Party identification, spending priorities, and media habits show clear patterns in the heatmaps.
-
-(Exact numbers are documented in scripts/analysis.R and the output.)
-
+> **Note:** The raw dataset is not included in the public repo.
+> Place your local `.tab` file into `data/` before running the analysis.
 
 ---
 
-## ▶️ How to Run
+## ⚙️ Tools & Packages
 
-1. Place the dataset (e.g., `bsa2019_poverty_open.tab`) into the `data/` folder  
-2. Open RStudio  
-3. Run:
+This project uses:
 
-```r
-source("scripts/analysis.R")
-👤 Author
-Khalil Alakbarzade
-MSc Data Science – University of Sheffield
-GitHub: @KhalilAlak
+* **R** (tidyverse ecosystem)
 
-📄 License
-Released under the MIT License.
-Feel free to use, adapt, or build on this project.
+  * `tidyverse` – data wrangling & plotting
+  * `ggplot2` – visualisations
+  * `corrplot` – correlation matrix visualisation
+* **Git & GitHub** – version control and portfolio hosting
+* **Markdown** – documentation
+
+---
+
+## 🚀 How to Run the Analysis
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019.git
+   cd British-Social-Attitudes-Analysis-2019
+   ```
+
+2. Put the BSA 2019 `.tab` file into the `data/` folder (same name used in `scripts/analysis.R`).
+
+3. Open R / RStudio and run:
+
+   ```r
+   source("scripts/analysis.R")
+   ```
+
+4. The script will:
+
+   * Clean and transform the data
+   * Run EDA and statistical tests
+   * Fit linear & logistic regression models
+   * Produce plots for heatmaps and the correlation matrix
+
+---
+
+## 🔍 Key Findings (Summary)
+
+* **Age & education** show a strong association (large chi-square, p < 0.001).
+* **Fraud perception (`NatFrEst`)** is influenced by both political orientation and income level.
+* The **logistic model** predicting “Increase taxes & spend” vs “Don’t increase” achieves high accuracy on the test set.
+* Party identification, spending priorities, and media habits show clear patterns in the heatmaps.
+
+(Exact numbers are documented in `scripts/analysis.R` and the output.)
+
+---
+
+## 👤 Author
+
+**Khalil Alakbarzade**
+MSc Data Science, University of Sheffield
+
+If you have questions or suggestions, feel free to open an issue or contact me via GitHub.
+
+```
+
+---
+
+If you want, next I can also:
+
+- suggest a `.gitignore` specific for R projects (Rproj, .Rhistory, etc.)
+- help you add a nice LICENSE (MIT or Apache 2.0) and commit that too.
+::contentReference[oaicite:0]{index=0}
+```
