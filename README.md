@@ -1,150 +1,123 @@
-📊 British Social Attitudes Survey 2019
-End-to-End Data Science Analysis (R Project)
-<p align="left"> <img src="https://img.shields.io/badge/R-Tidyverse-blue?logo=r" /> <img src="https://img.shields.io/badge/Analysis-Statistical%20%26%20ML-green" /> <img src="https://img.shields.io/badge/Data-BSA%202019-orange" /> <img src="https://img.shields.io/badge/Author-Khalil%20Alakbarzade-lightgrey" /> </p>
-📌 Overview
 
-This repository contains a complete end-to-end data science project analysing the
-British Social Attitudes Survey 2019 (BSA).
+# 📊 British Social Attitudes Survey 2019 – Data Science Analysis
 
-The analysis focuses on:
+This project presents an **end‑to‑end data science workflow in R**, using the  
+**British Social Attitudes (BSA) Survey 2019**, focusing on public attitudes toward  
+poverty, welfare, political ideology, income, and social behaviour.
 
-Poverty & welfare attitudes
+The analysis simulates real consulting work for **HM Treasury**, following the  
+structure of the University of Sheffield module *IJC437 – Introduction to Data Science*.
 
-Political ideology
+---
 
-Demographics (age, education, income)
+## 🚀 Project Workflow
 
-Trust, spending priorities, and fraud perception
+### **1. Data Preparation**
+- Importing survey `.tab` dataset  
+- Converting special missing codes into `NA`  
+- Cleaning, filtering, and validation checks  
 
-This mirrors real consulting work for HM Treasury, following the workflow from the
-University of Sheffield module IJC437 – Introduction to Data Science.
+### **2. Feature Engineering**
+- Recoding age into 4 policy‑friendly bands  
+- Handling categorical scales  
+- Preparing modelling‑ready datasets  
 
-🔍 Project Highlights
-1. Data Preparation
+### **3. Exploratory Data Analysis (EDA)**
+- Age × education distribution  
+- Demographic frequency tables  
+- Histograms and descriptive summaries  
 
-Importing large survey dataset
+### **4. Statistical Testing**
+- **Chi‑square test**: Age vs Education  
+- **Correlation matrix** across attitude & political variables  
 
-Converting special missing codes → proper NA
+### **5. Machine Learning Models**
 
-Cleaning & validation
+#### **Linear Regression**
+Predicting perceived welfare fraud (`NatFrEst`) using:
+- Political ideology  
+- Income level  
 
-2. Feature Engineering
+#### **Logistic Regression**
+Binary classification:  
+**Increase taxes & spend (1)** vs **Don’t increase (0)**  
+✔ Achieved **~95% accuracy**
 
-Re-coding age groups into policy-friendly bands
+### **6. Visualisations**
+- Heatmaps (Party ID × Social Media News Use, Spending Priorities)  
+- Correlation matrix (corrplot)  
+- Boxplots (education vs age group)
 
-Handling categorical variables
+---
 
-Preparing modelling datasets
+## 📁 Repository Structure
 
-3. Exploratory Data Analysis
-
-Age × Education distributions
-
-Demographic summaries
-
-Visual inspection (histograms, tables, etc.)
-
-4. Statistical Testing
-
-Chi-square test: Age vs Education
-
-Correlation analysis across political & social attitudes
-
-5. Machine Learning Models
-Linear Regression
-
-Predicting welfare fraud perception (NatFrEst) using:
-
-Political ideology
-
-Income level
-
-Logistic Regression
-
-Binary classification:
-Increase Taxes & Spend (1) vs Don’t Increase Taxes & Spend (0)
-
-✔️ Achieved ~95% accuracy on the test set.
-
-6. Visualisation
-
-Heatmaps (Party ID × Social Media News; Spending Priorities × SMNews)
-
-Correlation matrix
-
-Boxplots (Age Group vs Education)
-
-📁 Repository Structure
+```
 British-Social-Attitudes-Analysis-2019/
 │
-├── data/                     # Raw dataset (NOT included in repo)
-│    └── bsa2019_poverty_open.tab  # Place your .tab file here
+├── data/                     # Raw dataset (NOT committed)
+│   └── bsa2019_poverty_open.tab
 │
-├── scripts/
-│    └── analysis.R           # Main R analysis script
+├── scripts/                  # R scripts for EDA & modelling
+│   └── analysis.R            # Main workflow script
 │
 ├── README.md                 # Project documentation
-├── .gitignore                # Ignore data, logs, temp files
+├── .gitignore                # Local files ignored
 └── LICENSE                   # MIT License
+```
 
+> **Note:** Dataset is NOT included for privacy/size reasons.  
+Add your `.tab` file into the `data/` folder before running the script.
 
-📌 Note: The raw dataset is not included for size/privacy.
-Place your .tab file inside the data/ folder before running the script.
+---
 
-🛠️ Tools & Libraries
+## 🛠 Tools & Packages
 
-This project uses:
+### **R Packages**
+- tidyverse (dplyr, tidyr, readr)
+- ggplot2
+- corrplot
+- tibble
 
-R (tidyverse ecosystem)
+### **Other Tools**
+- Git & GitHub  
+- RStudio  
+- Markdown  
 
-tidyverse — data wrangling & plotting
+---
 
-ggplot2 — visualisations
-
-corrplot — correlation matrices
-
-tidyr / dplyr — reshaping & wrangling
-
-Git & GitHub
-
-Version control
-
-Portfolio hosting
-
-Markdown
-
-Documentation
-
-▶️ How to Run the Analysis
-
-Clone the repository:
-
-git clone https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019.git
-
+## ▶️ How to Run
 
 Open RStudio and run:
 
+```r
 source("scripts/analysis.R")
+```
 
+Make sure:
+1. Your `.tab` dataset is placed in `/data`
+2. All packages are installed
+3. You run the script from the project root directory
 
-Ensure your dataset is inside the data/ folder.
+---
 
-🧠 Key Findings (Short Summary)
+## 📌 Key Findings
 
-Age is strongly associated with education (χ², p < 0.001).
+- **Strong relationship** between age and education (χ², p < 0.001)  
+- **Political ideology + income** influence welfare‑fraud perception  
+- Logistic model achieves **~95% accuracy**  
+- Clear grouping patterns in Party ID, SMNews, and spending preferences  
 
-Political ideology + income significantly predict perceived fraud levels.
+---
 
-Logistic model predicting tax-spending attitudes achieved ~95% accuracy.
+## 👤 Author
 
-Clear structure between Party ID, social media use, and spending priorities.
+**Khalil Alakbarzade**  
+MSc Data Science – University of Sheffield  
+GitHub: https://github.com/KhalilAlak
 
-👤 Author
+---
 
-Khalil Alakbarzade
-MSc Data Science – University of Sheffield
-GitHub: @KhalilAlak
+## 📄 License
 
-📄 License
-
-Released under the MIT License — free to use, modify, and build on.
+Distributed under the **MIT License**.
