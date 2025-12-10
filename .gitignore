@@ -1,1 +1,17 @@
-data/*.tab
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Data files
+*.tab
+*.csv
+*.tsv
+*.sav
+data/
+
+# Mac system files
+.DS_Store
+
+# Logs
+*.log
