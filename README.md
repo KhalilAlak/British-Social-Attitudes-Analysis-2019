@@ -1,7 +1,4 @@
----
-
-# 📊 British Social Attitudes Survey 2019
-
+# 📊 British Social Attitudes Survey 2019  
 ### **End-to-End Data Science Analysis (R Project)**
 
 <p align="left">
@@ -15,127 +12,109 @@
 
 ## 📌 Overview
 
-This repository contains a full **end-to-end data science workflow** analysing the
-**British Social Attitudes Survey 2019**, focusing on:
+This repository presents a complete **end-to-end data science workflow** using the  
+**British Social Attitudes Survey 2019** dataset. The analysis focuses on:
 
-* Poverty & welfare opinions
-* Political attitudes
-* Demographic patterns (age, education, income)
-* Public trust, spending priorities, and fraud perception
+- Poverty & welfare perceptions  
+- Political attitudes  
+- Income & education patterns  
+- Trust, spending preferences, and fraud estimates  
+- Social media news behaviour  
 
-The project replicates **real consulting work** for HM Treasury, following the
-workflow taught in the University of Sheffield module *IJC437 – Introduction to Data Science*.
+The project mirrors real consulting work for **HM Treasury**, following the structure taught in  
+**IJC437 – Introduction to Data Science (University of Sheffield)**.
 
 ---
 
 ## 🔍 Project Highlights
 
 ### **1. Data Preparation**
-
-* Importing respondent-level survey data
-* Converting all special missing codes to proper `NA`
-* Cleaning, filtering, and validation
+- Importing raw survey data (`.tab`)
+- Converting special BSA missing-value codes into proper `NA`
+- Filtering invalid or incomplete responses
 
 ### **2. Feature Engineering**
-
-* Recoding age into policy-friendly bands (18–34, 35–54, 55–64, 65+)
-* Reshaping categorical variables
-* Preparing data for modelling
+- Recoding age into policy-friendly groups (18–34, 35–54, 55–64, 65+)
+- Cleaning categorical variables  
+- Preparing modelling-ready datasets  
 
 ### **3. Exploratory Data Analysis**
-
-* Age–education distributions
-* Demographic frequency tables
-* Histograms and descriptive summaries
+- Age × education distributions  
+- Summary statistics  
+- Histograms, frequency tables  
 
 ### **4. Statistical Testing**
-
-* χ² test: **Age vs Education**
-* Correlation analysis across political & social attitude variables
+- **Chi-square test**: strong association between age and education  
+- Correlation exploration among political & social attitude variables  
 
 ### **5. Machine Learning Models**
 
 #### **Linear Regression**
-
-Predicting perceived welfare fraud levels (`NatFrEst`) from:
-
-* Political ideology
-* Income level
+Predicting **NatFrEst** (Perception of welfare fraud) using:
+- Political ideology (leftrigh, libauth, welfare2)
+- Political engagement  
+- Income level  
 
 #### **Logistic Regression**
+Binary classification for:
+**Increase taxes & spend** vs **Don’t increase taxes & spend**
 
-Binary classification:
-**“Increase taxes & spend” vs “Don’t increase taxes & spend”**
-
-✔️ Achieved **95% prediction accuracy**
+- Achieved **95% accuracy** on the test set.
 
 ### **6. Visualisation**
-
-* Heatmaps (Party ID × Social Media News Use, Spending Priorities)
-* Correlation matrix (ggplot2 + corrplot)
-* Boxplots (education vs age group)
+- Heatmaps (Party ID × SMNews, Spending Priorities)
+- Correlation matrix  
+- Boxplots (Education by Age Group)
 
 ---
 
-## 🧠 Key Results (Short Summary)
+## 🧠 Key Findings
 
-* **Strong association between age and education** (χ², p < 0.001).
-* **Political leaning** and **income** significantly predict fraud perception.
-* **Logistic model** accurately predicts tax-spending attitudes.
-* Clear grouping patterns in **Party ID, social media habits, and spending priorities**.
+- **Strong correlation** between **age** and **education** (χ², p < 0.001).  
+- **Political leaning** and **income** significantly influence fraud perception.  
+- Logistic regression accurately predicts tax-and-spend preferences.  
+- Clear demographic patterns in **Party ID** and **social media news use**.  
 
 ---
 
 ## 🛠️ Tools & Libraries
 
-* **R:** tidyverse, ggplot2, corrplot, tidyr
-* **Git & GitHub**
-* **Markdown** for documentation
+- **R:** tidyverse, ggplot2, corrplot, tidyr  
+- Git & GitHub  
+- Markdown  
 
 ---
 
 ## 📁 Repository Structure
 
-```
 British-Social-Attitudes-Analysis-2019/
 │
-├── data/               # Raw data files (not included in repo)
-├── scripts/            # R scripts (cleaning, EDA, modeling)
-│    └── analysis.R
+├── data/ # Raw data (NOT included in repo)
+├── scripts/ # R scripts for EDA & modelling
+│ └── analysis.R
 │
-├── README.md           # Documentation
-├── .gitignore          # Ignoring data, logs, temporary files
-└── LICENSE             # Project license (MIT)
-```
+├── README.md # Project documentation
+├── .gitignore # Ignoring data & temp files
+└── LICENSE # MIT License
+
+yaml
+Copy code
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run
 
-Open RStudio and run:
+1. Place the dataset (e.g., `bsa2019_poverty_open.tab`) into the `data/` folder  
+2. Open RStudio  
+3. Run:
 
 ```r
 source("scripts/analysis.R")
-```
-
-Make sure your dataset is placed inside the `data/` folder.
-
----
-
-## 👤 Author
-
-**Khalil Alakbarzade**
+👤 Author
+Khalil Alakbarzade
 MSc Data Science – University of Sheffield
-GitHub: [@KhalilAlak](https://github.com/KhalilAlak)
+GitHub: @KhalilAlak
 
----
-
-## 📄 License
-
-This project is released under the **MIT License** — feel free to build on it.
-
-<<<<<<< HEAD
----
-=======
----
->>>>>>> 5cb6b9ef0bf1f6a5fc3aa7ca5a8d33d82a5fb59c
+📄 License
+Released under the MIT License.
+Feel free to use, adapt, or build on this project.
