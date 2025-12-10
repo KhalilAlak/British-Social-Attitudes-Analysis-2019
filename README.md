@@ -134,4 +134,8 @@ GitHub: [@KhalilAlak](https://github.com/KhalilAlak)
 
 This project is released under the **MIT License** — feel free to build on it.
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> 5cb6b9ef0bf1f6a5fc3aa7ca5a8d33d82a5fb59c
