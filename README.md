@@ -1,6 +1,3 @@
-Here is a **professional, clean, modern, GitHub-ready README** that looks like something a real data science consultant or MSc student would publish.
-It uses **visual hierarchy, emojis as section markers, clean spacing, badges, and a modern layout**.
-
 ---
 
 # 📊 British Social Attitudes Survey 2019
@@ -138,13 +135,3 @@ GitHub: [@KhalilAlak](https://github.com/KhalilAlak)
 This project is released under the **MIT License** — feel free to build on it.
 
 ---
-
-If you want, I can also add:
-
-✅ A project banner at the top
-✅ Logo-style title
-✅ Badges for stars, forks, last commit
-✅ Table of contents
-✅ Screenshots of visualisations
-
-Just tell me and I’ll upgrade it even more.
