@@ -1,138 +1,150 @@
-📊 British Social Attitudes Survey 2019
-End-to-End Data Science Analysis (R Project)
+Here is a **professional, clean, modern, GitHub-ready README** that looks like something a real data science consultant or MSc student would publish.
+It uses **visual hierarchy, emojis as section markers, clean spacing, badges, and a modern layout**.
 
-This repository contains a full data science workflow analysing the British Social Attitudes Survey (BSA) 2019, with a focus on poverty, welfare, political attitudes, social trust, and demographic patterns in Britain.
+---
 
-The project mirrors the structure of a professional consulting engagement for HM Treasury — from raw data → insights → statistical modelling → communication.
+# 📊 British Social Attitudes Survey 2019
 
-🚀 Project Overview
+### **End-to-End Data Science Analysis (R Project)**
 
-This analysis walks through the complete life-cycle of a data science project:
+<p align="left">
+  <img src="https://img.shields.io/badge/R-Tidyverse-blue?logo=r" />
+  <img src="https://img.shields.io/badge/Analysis-Statistical%20%26%20ML-green" />
+  <img src="https://img.shields.io/badge/Data-UK%20BSA%202019-orange" />
+  <img src="https://img.shields.io/badge/Author-Khalil%20Alakbarzade-lightgrey" />
+</p>
 
-1️⃣ Data Import & Cleaning
+---
 
-Loading the official BSA 2019 dataset
+## 📌 Overview
 
-Converting special missing-value codes (−1, 8, 9, 98, 99…)
+This repository contains a full **end-to-end data science workflow** analysing the
+**British Social Attitudes Survey 2019**, focusing on:
 
-Preparing variables for modelling
+* Poverty & welfare opinions
+* Political attitudes
+* Demographic patterns (age, education, income)
+* Public trust, spending priorities, and fraud perception
 
-2️⃣ Feature Engineering
+The project replicates **real consulting work** for HM Treasury, following the
+workflow taught in the University of Sheffield module *IJC437 – Introduction to Data Science*.
 
-Recoding respondent age into policy-friendly groups
+---
 
-Handling education categories
+## 🔍 Project Highlights
 
-Creating binary classes for logistic regression
+### **1. Data Preparation**
 
-Structuring variables for statistical models
+* Importing respondent-level survey data
+* Converting all special missing codes to proper `NA`
+* Cleaning, filtering, and validation
 
-3️⃣ Exploratory Data Analysis
+### **2. Feature Engineering**
 
-Age distributions
+* Recoding age into policy-friendly bands (18–34, 35–54, 55–64, 65+)
+* Reshaping categorical variables
+* Preparing data for modelling
 
-Education patterns
+### **3. Exploratory Data Analysis**
 
-Cross-tabulations
+* Age–education distributions
+* Demographic frequency tables
+* Histograms and descriptive summaries
 
-Demographic insights
+### **4. Statistical Testing**
 
-4️⃣ Statistical Testing
+* χ² test: **Age vs Education**
+* Correlation analysis across political & social attitude variables
 
-Chi-square tests (age × education association)
+### **5. Machine Learning Models**
 
-Correlation analysis (political attitudes, spending views, poverty perception)
+#### **Linear Regression**
 
-5️⃣ Machine Learning Models
+Predicting perceived welfare fraud levels (`NatFrEst`) from:
 
-Linear regression: Predicting fraud perception (NatFrEst) using politics + income
+* Political ideology
+* Income level
 
-Logistic regression: Predicting who supports “Increase taxes & spend”
+#### **Logistic Regression**
 
-Model accuracy evaluation (95% achieved)
+Binary classification:
+**“Increase taxes & spend” vs “Don’t increase taxes & spend”**
 
-6️⃣ Visualisations
+✔️ Achieved **95% prediction accuracy**
 
-Heatmaps
+### **6. Visualisation**
 
-Correlation matrix
+* Heatmaps (Party ID × Social Media News Use, Spending Priorities)
+* Correlation matrix (ggplot2 + corrplot)
+* Boxplots (education vs age group)
 
-Histograms
+---
 
-Boxplots
+## 🧠 Key Results (Short Summary)
 
-7️⃣ Reporting & Interpretation
+* **Strong association between age and education** (χ², p < 0.001).
+* **Political leaning** and **income** significantly predict fraud perception.
+* **Logistic model** accurately predicts tax-spending attitudes.
+* Clear grouping patterns in **Party ID, social media habits, and spending priorities**.
 
-Interpreting model coefficients
+---
 
-Explaining relationships in clear policy language
+## 🛠️ Tools & Libraries
 
-Turning findings into insights for stakeholders
+* **R:** tidyverse, ggplot2, corrplot, tidyr
+* **Git & GitHub**
+* **Markdown** for documentation
 
-📁 Project Structure
-📦 British-Social-Attitudes-Analysis-2019
+---
+
+## 📁 Repository Structure
+
+```
+British-Social-Attitudes-Analysis-2019/
 │
-├── data/
-│   └── bsa2019_poverty_open.tab      # raw dataset (excluded from GitHub)
+├── data/               # Raw data files (not included in repo)
+├── scripts/            # R scripts (cleaning, EDA, modeling)
+│    └── analysis.R
 │
-├── scripts/
-│   ├── analysis.R                    # full analysis pipeline
-│   └── cleaning.R                    # data cleaning functions
-│
-├── README.md                         # this file
-├── .gitignore                        # ignored files
-└── LICENSE                           # project license
+├── README.md           # Documentation
+├── .gitignore          # Ignoring data, logs, temporary files
+└── LICENSE             # Project license (MIT)
+```
 
-🧰 Tools & Libraries
-R Packages
+---
 
-tidyverse — data wrangling
+## ▶️ How to Run the Project
 
-ggplot2 — visualisation
+Open RStudio and run:
 
-corrplot — correlation matrices
-
-reshape2 / tidyr — heatmaps
-
-stats — modelling (lm, glm, chisq.test)
-
-Other Tools
-
-Git & GitHub
-
-Markdown
-
-📌 Key Findings
-
-📍 1. Age strongly predicts education levels
-→ Chi-square test: p < 0.001
-
-📍 2. Political beliefs significantly influence fraud perception (NatFrEst)
-→ Political variables explain ~22% of variation alone
-→ Adding income increases model explanatory power
-
-📍 3. Logistic model accurately predicts tax-and-spend attitudes
-→ Accuracy: 95.8%
-
-📍 4. Clear relationships exist between media habits, spending priorities, and party ID
-
-▶️ How to Run the Analysis
-
-Open R or RStudio and run:
-
+```r
 source("scripts/analysis.R")
+```
 
+Make sure your dataset is placed inside the `data/` folder.
 
-Make sure the dataset is placed inside the data/ folder.
+---
 
-👤 Author
+## 👤 Author
 
-Khalil Alakbarzade
-MSc Data Science — University of Sheffield
-📍 Sheffield, United Kingdom
-🔗 GitHub: https://github.com/KhalilAlak
+**Khalil Alakbarzade**
+MSc Data Science – University of Sheffield
+GitHub: [@KhalilAlak](https://github.com/KhalilAlak)
 
-📄 License
+---
 
-This project is released under the MIT License.
-See the LICENSE file for details.
+## 📄 License
+
+This project is released under the **MIT License** — feel free to build on it.
+
+---
+
+If you want, I can also add:
+
+✅ A project banner at the top
+✅ Logo-style title
+✅ Badges for stars, forks, last commit
+✅ Table of contents
+✅ Screenshots of visualisations
+
+Just tell me and I’ll upgrade it even more.
