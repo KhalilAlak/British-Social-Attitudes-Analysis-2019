@@ -1,57 +1,137 @@
-📊 British Social Attitudes Survey 2019 – Data Science Analysis
+---
 
-This repository contains an end-to-end data science project analysing the British Social Attitudes Survey 2019, focusing on poverty, welfare, political attitudes, and demographic patterns.
+# 📊 British Social Attitudes Survey 2019
 
-The project simulates real consulting work for HM Treasury, following the structure of:
+### **End-to-End Data Science Analysis (R Project)**
 
-Data import & cleaning
+<p align="left">
+  <img src="https://img.shields.io/badge/R-Tidyverse-blue?logo=r" />
+  <img src="https://img.shields.io/badge/Analysis-Statistical%20%26%20ML-green" />
+  <img src="https://img.shields.io/badge/Data-UK%20BSA%202019-orange" />
+  <img src="https://img.shields.io/badge/Author-Khalil%20Alakbarzade-lightgrey" />
+</p>
 
-Missing-value handling
+---
 
-Feature transformation (e.g., age recoding)
+## 📌 Overview
 
-Exploratory data analysis
+This repository contains a full **end-to-end data science workflow** analysing the
+**British Social Attitudes Survey 2019**, focusing on:
 
-Statistical testing (Chi-square, correlations)
+* Poverty & welfare opinions
+* Political attitudes
+* Demographic patterns (age, education, income)
+* Public trust, spending priorities, and fraud perception
 
-Machine learning models
+The project replicates **real consulting work** for HM Treasury, following the
+workflow taught in the University of Sheffield module *IJC437 – Introduction to Data Science*.
 
-Linear regression
+---
 
-Logistic regression
+## 🔍 Project Highlights
 
-Visualisations (heatmaps, correlation matrix)
+### **1. Data Preparation**
 
-Summarising findings
+* Importing respondent-level survey data
+* Converting all special missing codes to proper `NA`
+* Cleaning, filtering, and validation
 
-🔧 Tools Used
+### **2. Feature Engineering**
 
-R (tidyverse, ggplot2, corrplot, reshape2 or tidyr::pivot_longer)
+* Recoding age into policy-friendly bands (18–34, 35–54, 55–64, 65+)
+* Reshaping categorical variables
+* Preparing data for modelling
 
-Git & GitHub
+### **3. Exploratory Data Analysis**
 
-Markdown
+* Age–education distributions
+* Demographic frequency tables
+* Histograms and descriptive summaries
 
-📁 Project Structure
-data/       # raw data (not included)
-scripts/    # R analysis code
-README.md
-.gitignore
+### **4. Statistical Testing**
 
-📈 Key Results
+* χ² test: **Age vs Education**
+* Correlation analysis across political & social attitude variables
 
-Strong association between age and education level (χ² p < 0.001).
+### **5. Machine Learning Models**
 
-Political leaning and income impact fraud perception (NatFrEst).
+#### **Linear Regression**
 
-Logistic model predicting “Increase taxes & spend” achieved 95% accuracy.
+Predicting perceived welfare fraud levels (`NatFrEst`) from:
 
-Strong patterns linking Party ID, spending priorities, and media habits.
+* Political ideology
+* Income level
 
-🚀 How to Run
+#### **Logistic Regression**
+
+Binary classification:
+**“Increase taxes & spend” vs “Don’t increase taxes & spend”**
+
+✔️ Achieved **95% prediction accuracy**
+
+### **6. Visualisation**
+
+* Heatmaps (Party ID × Social Media News Use, Spending Priorities)
+* Correlation matrix (ggplot2 + corrplot)
+* Boxplots (education vs age group)
+
+---
+
+## 🧠 Key Results (Short Summary)
+
+* **Strong association between age and education** (χ², p < 0.001).
+* **Political leaning** and **income** significantly predict fraud perception.
+* **Logistic model** accurately predicts tax-spending attitudes.
+* Clear grouping patterns in **Party ID, social media habits, and spending priorities**.
+
+---
+
+## 🛠️ Tools & Libraries
+
+* **R:** tidyverse, ggplot2, corrplot, tidyr
+* **Git & GitHub**
+* **Markdown** for documentation
+
+---
+
+## 📁 Repository Structure
+
+```
+British-Social-Attitudes-Analysis-2019/
+│
+├── data/               # Raw data files (not included in repo)
+├── scripts/            # R scripts (cleaning, EDA, modeling)
+│    └── analysis.R
+│
+├── README.md           # Documentation
+├── .gitignore          # Ignoring data, logs, temporary files
+└── LICENSE             # Project license (MIT)
+```
+
+---
+
+## ▶️ How to Run the Project
+
+Open RStudio and run:
+
+```r
 source("scripts/analysis.R")
+```
 
-📩 Contact
+Make sure your dataset is placed inside the `data/` folder.
 
-Created by Khalil Alakbarzade
+---
+
+## 👤 Author
+
+**Khalil Alakbarzade**
 MSc Data Science – University of Sheffield
+GitHub: [@KhalilAlak](https://github.com/KhalilAlak)
+
+---
+
+## 📄 License
+
+This project is released under the **MIT License** — feel free to build on it.
+
+---
